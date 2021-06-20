@@ -1,6 +1,7 @@
-#DevOps Engineer Name: Aditya Munjal
-#Owner: amunjal
-#Owner tag on ec2 will be same as the SNS Topic name
+# DevOps Engineer Name: Aditya Munjal
+# Owner: amunjal
+# Owner tag on ec2 will be same as the SNS Topic name
+# You can add more SNS topic and subscription resources here and they will be created in every region
 
 resource "aws_sns_topic" "alert-list" {
   name = "amunjal"
