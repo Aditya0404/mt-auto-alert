@@ -13,7 +13,7 @@ variable "sns_names" {
 variable "sns_subs" {
   description = "Create sns topics"
   type        = list(string)
-  default     = ["adityamunjal73@gmail.com", "komalmunjal1203@gmail.com"]
+  default     = ["myemail@gmail.com", "myemail2@gmail.com"]
 }
 
 resource "aws_sns_topic" "alert-list" {
