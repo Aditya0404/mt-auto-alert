@@ -7,7 +7,7 @@ resource "aws_lambda_function" "auto_alert" {
 }
 
 resource "aws_iam_role" "iam_for_lambda" {
-  name = "iam_for_lambda_tf"
+  name = "iam_for_lambda_tf_${var.aws_region}"
 
   assume_role_policy = <<EOF
 {
@@ -27,7 +27,7 @@ EOF
 }
 
 resource "aws_iam_policy" "lambda_logging" {
-  name        = "lambda_logging"
+  name        = "lambda_logging_${var.aws_region}"
   path        = "/"
   description = "IAM policy for logging from a lambda"
 

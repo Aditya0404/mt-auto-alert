@@ -10,7 +10,7 @@ sed "s/folder/$i/g" template/main.tf > main.tf
 TERRAFORM_INIT=$(expect -c "
 spawn terraform init
 expect \"Enter a value\"
-send \"yes\r\"
+send \"no\r\"
 set timeout 15
 expect eof
 ")
