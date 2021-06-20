@@ -26,9 +26,9 @@ Step 2. In templates/main.tf, change the following:
   *  The Backend path mentioned as of now is "/Users/Aditya/state/folder/terraform.tfstate", you have to change it to the location you want to save the state file to. Please follow the format:
   "\<your-location\>/folder/terraform.tfstate"
 
-Step 3. (optional) If You have already enabled Cloudtrail in your account, you can either comment everything in cloudtrail.tf file for delete it.
+Step 3. In the file sns.tf, add the email addresses of the respective owners in the variable "sns_subs" and also add the corresponding owner names in variable "sns_names". For example, if I add "myemailaddress@gmail.com" in sns_subs and "amunjal" in sns_names, then to set the target of auto alert, I will tag my instances as "owner:amunjal".
 
-Step 4. (optional) This solution creates an SNS topic by the name amunjal, you can change this in SNS.tf.
+Step 4. (optional) If You have already enabled Cloudtrail in your account, you can either comment everything in cloudtrail.tf file for delete it.
 
 Step 5. Just run the bash script: script.sh and it will ask you the region in which you want to set up the solution or you can type "All" to set it up in all aws regions.
 
@@ -42,7 +42,7 @@ bash script.sh
 
 ![Alt text](./screenshots/1.png?raw=true "Terraform in action")
 
-2. Then you can see the output, terraform will create 12 resources for you.
+2. Then you can see the output, terraform will create 14 resources for you.
 
 ![Alt text](./screenshots/2.png?raw=true "Terraform in action")
 
