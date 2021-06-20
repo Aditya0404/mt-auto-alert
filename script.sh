@@ -17,7 +17,7 @@ case $region in
     spawn terraform init
     expect \"Enter a value\"
     send \"no\r\"
-    set timeout 15
+    set timeout 20
     expect eof
     ")
 
@@ -25,7 +25,7 @@ case $region in
     spawn terraform apply
     expect \"Enter a value\"
     send \"$i\r\"
-    set timeout 10
+    set timeout 20
     expect \"Enter a value\"
     send \"yes\r\"
     set timeout 100
@@ -47,7 +47,7 @@ case $region in
     spawn terraform init
     expect \"Enter a value\"
     send \"no\r\"
-    set timeout 15
+    set timeout 20
     expect eof
     ")
 
