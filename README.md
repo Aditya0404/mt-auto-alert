@@ -23,17 +23,39 @@ Following are the Prerequisites:
 Step 1. Clone this Repository
 
 Step 2. In templates/main.tf, change the following:
-  *  The Backend path mentioned as of now is "/Users/Aditya/state/folder/terraform.tfstate", you have to change it to the location you want to save the state file to. Please follow the format "\<your location\>/folder/terraform.tfstate"
+  *  The Backend path mentioned as of now is "/Users/Aditya/state/folder/terraform.tfstate", you have to change it to the location you want to save the state file to. Please follow the format "\<your-location\>/folder/terraform.tfstate"
 
-Step 3 (optional). If You have already enabled Cloudtrail in your account, you can either comment everything in cloudtrail.tf file for delete it.
+Step 3. (optional) If You have already enabled Cloudtrail in your account, you can either comment everything in cloudtrail.tf file for delete it.
 
-Step 4. Just run the bash script: script.sh and it will ask you the region in which you want to set up the solution or you can type "All" to set it up in all aws regions.
+Step 4. (optional) This solution creates an SNS topic by the name amunjal, you can change this in SNS.tf.
+
+Step 5. Just run the bash script: script.sh and it will ask you the region in which you want to set up the solution or you can type "All" to set it up in all aws regions.
 
 ```bash
 bash script.sh
 ```
 
-## Screenshots:
+## Screenshots(Script in action):
+
+1. First, it will ask you the region in which you want to deploy this solution:
+
+![Alt text](./screenshots/1.png?raw=true "Terraform in action")
+
+2. Then you can see the output, terraform will create 12 resources for you.
+
+![Alt text](./screenshots/2.png?raw=true "Terraform in action")
+
+3. After this, you can test the solution by just launching an EC2 instance with the tags: threshold and owner(will be same as of sns topic name)
+
+![Alt text](./screenshots/3.png?raw=true "Terraform in action")
 
 
-![Alt text](./screenshots/t1.png?raw=true "Terraform and Ansible in action")
+![Alt text](./screenshots/4.png?raw=true "Terraform in action")
+
+4. After EC2 starts running, head over to the cloudwatch console and see that an alarm will be automatically created:
+
+![Alt text](./screenshots/5.png?raw=true "Terraform in action")
+
+5. And in action of this alarm, the same sns will be mentioned. This solution creates an SNS topic by the name amunjal, you can change this in SNS.tf
+
+![Alt text](./screenshots/6.png?raw=true "Terraform in action")
