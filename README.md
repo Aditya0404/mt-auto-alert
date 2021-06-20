@@ -1,7 +1,6 @@
 # mt-auto-alert
 
-This Project sets up Auto alert functionality for ec2-instance of your AWS account in every region.
-It automatically sets up Cloudwatch alert on CPU Utilization of EC2 instance based on the threshold specified in the ec2 tags.
+This Project automatically sets up Cloudwatch alert on CPU Utilization of EC2 instance based on the threshold specified in the ec2 tags.
 
 
 Following are the Prerequisites:
@@ -24,7 +23,7 @@ Following are the Prerequisites:
 Step 1. Clone this Repository
 
 Step 2. In templates/main.tf, change the following:
-  *  The Backend path mentioned as of now is "/Users/Aditya/state/folder/terraform.tfstate", you have to change it to the location you want to save the state file to. Please follow the format "<your location>/folder/terraform.tfstate"
+  *  The Backend path mentioned as of now is "/Users/Aditya/state/folder/terraform.tfstate", you have to change it to the location you want to save the state file to. Please follow the format "\<your location\>/folder/terraform.tfstate"
 
 Step 3 (optional). If You have already enabled Cloudtrail in your account, you can either comment everything in cloudtrail.tf file for delete it.
 
