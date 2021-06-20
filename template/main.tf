@@ -1,5 +1,4 @@
 variable "aws_region" {
-#  default = "us-east-1"
 }
 
 # Assign the region to the provider in this case AWS
@@ -9,7 +8,7 @@ provider "aws" {
 
 terraform {
   backend "local" {
-    path = "/Users/Aditya/Downloads/mindtickle/state/folder/terraform.tfstate"
+    path = "/Users/Aditya/state/folder/terraform.tfstate"
   }
 }
 
