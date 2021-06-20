@@ -1,5 +1,9 @@
+#DevOps Engineer Name: Aditya Munjal
+#Owner: amunjal
+#Owner tag on ec2 will be same as the SNS Topic name
+
 resource "aws_sns_topic" "alert-list" {
-  name = "kmunjal"
+  name = "amunjal"
 }
 
 resource "aws_sns_topic_subscription" "sns-topic" {
