@@ -36,9 +36,7 @@ def lambda_handler(event, context):
     print(threshold)
     print(owner)
     
-    
-    emails={'amunjal':'aditya.munjal@tothenew.com', 'kmunjal':'komal.munjal@nagarro.com'}
-    
+       
     
     
     client2 = boto3.client('cloudwatch')
